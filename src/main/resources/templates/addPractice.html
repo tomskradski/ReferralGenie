@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--    TODO: make title dynamic-->
+    <title>Add Practice</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{css/main.css}"/>
+</head>
+<body>
+<h1></h1>
+<div class="testbox">
+    <form action="/addPractice" method="post">
+        <h1>Referral Genie</h1>
+        <h2>Practice Info</h2>
+        <div class="item">
+            <p>Practice Name</p>
+            <div class="item">
+                <input type="text" placeholder="Practice Name" id="practiceName" name="practiceName" value>
+            </div>
+        </div>
+        <div class="item">
+            <p>Address</p>
+            <input type="text" name="address1" placeholder="Street address">
+            <input type="text" name="address2" placeholder="Street address line 2">
+            <div class="city-item">
+                <input type="text" name="city" placeholder="City">
+                <input type="text" name="state" placeholder="State">
+                <input type="text" name="zipcode" placeholder="Postal / Zip code">
+            </div>
+        </div>
+        <div class="item">
+            <p>Phone</p>
+            <input type="text" name="practiceNumber">
+        </div>
+        <div class="item">
+            <p>Email</p>
+            <input type="text" name="officeEmail">
+        </div>
+        <h2>Practice Contact Info</h2>
+        <div class="item">
+            <p>Contact Full Name</p>
+            <div class="item">
+                <input type="text" placeholder="Contact Full Name" id="practiceContactName" name="practiceContactName">
+            </div>
+        </div>
+        <div class="item">
+            <p>Phone</p>
+            <input type="text" name="practiceContactNumber">
+        </div>
+        <div class="btn-block">
+            <button type="submit" value="Submit">Submit</button>
+            <button type="button" value="Back" onclick="history.back()">Back</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
